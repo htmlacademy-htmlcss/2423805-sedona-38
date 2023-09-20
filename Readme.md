@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Nikita Shapovalov](https://up.htmlacademy.ru/htmlcss/38/user/2423805).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Шишов](https://htmlacademy.ru/profile/id2351985).
 
 ---
 
