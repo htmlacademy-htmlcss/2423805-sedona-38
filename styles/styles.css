@@ -1,0 +1,17 @@
+.background-hero {
+  background-image: url(../images/index-background.jpg);
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.newsletter {
+  background-image: url(../images/subscribe.jpg);
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.inner-background {
+  background-image: url(../images/inner-background.jpg);
+}
