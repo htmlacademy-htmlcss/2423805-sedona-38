@@ -35,15 +35,15 @@
                 </a>
               </li>
               <li class="navigation-item">
-                <a class="navigation-link" href="#">
+                <a class="navigation-link favorites-add" href="#">
                   <span class="visually-hidden">Добавить в избранное</span>
                   <img src="images/heart.svg" alt="heart" width="20" height="20">
-                  <span class="selected-hotels">12</span>
+                  <span class="favorites-count">12</span>
                 </a>
               </li>
               <li class="navigation-item">
                 <!-- class="reserve button" -->
-                <a class="button-reserve" href="catalog.html">Хочу сюда!</a>
+                <a class="navigation-link navigation-button" href="catalog.html">Хочу сюда!</a>
               </li>
             </ul>
           </nav>
@@ -56,22 +56,19 @@
           <img class="gargeaus-sedona" src="images/welcome.svg" width="458" height="352"
             alt="Welcom to the gargeaus Sedona. Becouse the Grand Canyon sucks!">
         </section>
-        <section class="description">
-          <h2 class="description-title">Седона — небольшой городок в Аризоне,
-            <br>заслуживающий большего!
-          </h2>
-          <p class="benefits-paragraph">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-        </section>
         <section class="advantages">
+          <div class="advantages-container">
+            <h2 class="advantages-sedona-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+            <p class="description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          </div>
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages-list">
-            <li class="landscape-item">
-              <div class="benefits-block">
-                <h3 class="advantages-title real-town">Настоящий <br>городок</h3>
+            <li class="advantages-item-big">
+              <div class="advantages-block">
+                <h3 class="advantages-title advantages-title-big">Настоящий <br>городок</h3>
                 <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img class="sedona-landscape" src="images/sedona-street.jpg" width="800" height="385"
-                alt="Домик в Седоне">
+              <img class="sedona-landscape" src="images/sedona-street.jpg" width="800" height="385" alt="Домик в Седоне">
             </li>
             <li class="advantages-item">
               <h3 class="advantages-title">Небольшая <br>площадь</h3>
@@ -85,41 +82,42 @@
               <h3 class="advantages-title">Мало <br>туристов</h3>
               <p class="advantages-content">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <li class="landscape-item landscape-item-reverse">
-              <div class="benefits-block">
-                <h3 class="advantages-title real-town">Там есть <br>мост дьявола</h3>
+            <li class="advantages-item-big advantages-item-reverse">
+              <div class="advantages-block">
+                <h3 class="advantages-title advantages-title-big">Там есть <br>мост дьявола</h3>
                 <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
-              <img class="devils-bridge" src="images/bridge-devil.jpg" width="800" height="385"
-                alt="Мост дьявола в Седоне">
+              <img class="devils-bridge" src="images/bridge-devil.jpg" width="800" height="385" alt="Мост дьявола в Седоне">
             </li>
           </ul>
         </section>
-        <section class="invitation">
-          <h2 class="invitation-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-          <p class="benefits-paragraph">Опытный персонал и качественное обслуживание!</p>
-        </section>
-        <section class="recommendations">
+        <section class="hotel-service">
+          <div class="service-container">
+            <h2 class="service-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+            <p class="service-description">Опытный персонал и качественное обслуживание!</p>
+          </div>
+        <!-- </section>
+        <section class="recommendations"> -->
           <h2 class="visually-hidden">Рекомендации</h2>
-          <ul class="recommendations-list">
-            <li class="recommendation-item background-recommends">
+          <ul class="service-list">
+            <li class="service-item background-service">
               <img class="house-icon" src="images/home-icon.svg" width="75" height="72" alt="Иконка домика">
-              <h3 class="recommendations-title">Жильё</h3>
-              <p class="recommends-paragraph">Рекомендуем пожить в настоящем мотеле,
+              <h3 class="service-title">Жильё</h3>
+              <p class="service-description">Рекомендуем пожить в настоящем мотеле,
                 всё как в кино!
               </p>
             </li>
-            <li class="recommendation-item">
+            <li class="service-item">
               <img class="burger-icon" src="images/food-icon.svg" width="75" height="72" alt="Иконка гамбургера">
-              <h3 class="recommendations-title">Еда</h3>
-              <p class="recommends-paragraph">Всегда заказывайте
+              <h3 class="service-title">Еда</h3>
+              <p class="service-description">Всегда заказывайте
                 топовый фирменный бургер, вы не разочаруетесь!
               </p>
             </li>
-            <li class="recommendation-item background-recommends">
+            <li class="service-item background-service">
               <img class="souvenir-icon" src="images/surprise-icon.svg" width="75" height="72" alt="Иконка подарка">
-              <h3 class="recommendations-title">Сувениры</h3>
-              <p class="recommends-paragraph">Не только китайского,
+              <h3 class="service-title">Сувениры</h3>
+              <p class="service-description">Не только китайского,
                 но и настоящего местного производства!
               </p>
             </li>
