@@ -485,8 +485,21 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
   margin-bottom: 25px;
   max-width: 620px;
+}
+
+.subscribe-title {
+  text-align: center;
+  font-family: "PT Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .service-description {
@@ -497,8 +510,7 @@ body {
   margin-top: 0;
 }
 
-.advantages-container,
-.hotel-search {
+.advantages-container {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -506,12 +518,13 @@ body {
   padding: 69px 0 69px 0;;
 }
 
-.service-container {
+.service-container,
+.hotel-search-container {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 64px 0 64px 0;;
+  padding: 64px 0 64px 0;
 }
 
   /* List */
@@ -564,6 +577,19 @@ body {
   text-align: center;
   color: #000000;
   width: 500px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.service-item-title {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 30px;
 }
 
 .service-item {
@@ -605,13 +631,23 @@ body {
 
 
 
-.advantages-block {
+.advantages-container-wide {
   background: #82B3D3;
   min-height: 385px;
   align-items: center;
   padding: 102px 85px;
 }
 
+/* .advantages-item-container {
+  width: 230px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 90px 85px;
+  margin-top: auto;
+  margin-bottom: auto;
+} */
   /*Title*/
 
 .advantages-title {
@@ -624,8 +660,9 @@ body {
   text-align: center;
 }
 
-.advantages-title-big {
+.advantages-title-wide {
   color: #ffffff;
+  margin-top: 0;
 }
 
 .advantages-content {
@@ -639,7 +676,9 @@ body {
 
 
 
-
+.subscribe-description {
+  margin-bottom: 54px;
+}
 
 
 .button-hotel-search, .subscribe-button {
@@ -710,6 +749,11 @@ body {
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
+  margin: 0;
+}
+
+.hotel-search-description {
+  margin-bottom: 54px;
 }
 
 
@@ -766,7 +810,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 96px 304px;
+  /* padding: 96px 304px; */
 }
 
 /* footer */
