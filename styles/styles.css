@@ -35,6 +35,10 @@ body {
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  display: none;
+}
+
 .button {
   color: #ffffff;
   background-color: #756157;
@@ -45,27 +49,53 @@ body {
   border-radius: 4px;
 }
 
-.card-buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
 .hotel-button {
   color:#ffffff;
-  border-radius: 4px;
-  min-width: 140px;
-  height: 36px;
+  background-color: #756157;
+  border-style: none;
+  text-decoration: none;
+}
+
+.hotel-button,
+.hotel-rating {
   font-family: "PT Sans";
   font-size: 16px;
   line-height: 20px;
-  background-color: #756157;
   text-transform: uppercase;
-  text-decoration: none;
+  border-radius: 4px;
+  padding: 8px 17px;
   text-align: center;
-  padding: 8px 22px;
+  width: 140px;
+}
+.hotel-rating {
+  background: #f2f2f2;
+  color: #333333;
 }
 
+.hotel-card-stars {
+  background-image: url("../images/hotels/star.svg");
+  height: 17px;
+}
 
+.one-star {
+  width: 18px;
+}
+
+.two-stars {
+  width: 36px;
+}
+
+.three-stars {
+  width: 54px;
+}
+
+.four-stars {
+  width: 72px;
+}
+
+.five-stars {
+  width: 90px;
+}
 
 /* header */
 
@@ -79,9 +109,6 @@ body {
   text-transform: uppercase;
   color: #ffffff;
 }
-
-
-
 .button-apply, .button-reset {
   background: #82b3d3;
   border: none;
@@ -98,9 +125,6 @@ body {
 .button-reset {
   background:transparent;
 }
-
-
-
 .sorting-select {
   font-family: "PT Sans";
   font-size: 18px;
@@ -115,7 +139,6 @@ body {
 }
 
 .button-select {
-
   width: 48px;
   height: 48px;
 }
@@ -130,15 +153,6 @@ body {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-
-
-.card-raiting {
-  display: flex;
-  justify-content: space-between;
-  /* margin-top: 16px; */
-  padding: 0;
-}
-
 .button-favorites {
   background: #82b3d3;
 }
@@ -147,23 +161,17 @@ body {
   background: #7db54f;
 }
 
-.card-price {
+.card-price,
+.card-type {
   color: #000000;
   font-family: "PT Sans";
   font-size: 18px;
-  font-weight: 400;
 }
 
-.hotel-rating {
-  font-family: "PT Sans";
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  background: #f2f2f2;
-  border-radius: 4px;
-  padding: 8px 22px;
-  min-width: 145px;
+.card-price {
+  text-align: right;
 }
+
 
 .main-container {
   flex-grow: 1;
@@ -179,9 +187,6 @@ body {
   margin-bottom: 40px;
 }
 
-/* .catalog-container {
-  padding: 50px 70px 60px;
-} */
   /*Pages*/
 
 .page-header {
@@ -257,9 +262,6 @@ body {
 
 }
 
-.navigation-logo {
-
-}
 
 .navigation-list {
   display: flex;
@@ -292,7 +294,6 @@ body {
 .catalog-filter-housing,
 .filter-price {
   border: none;
-
 }
 
 .navigation-button {
@@ -473,7 +474,6 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   max-width: 620px;
-  /* border-bottom: 2px rgba(0, 0, 0, 0.30) solid; */
 }
 
 .advantages-sedona-title,
@@ -547,6 +547,11 @@ body {
   background:  rgba(131, 179, 211, 0.12);
 }
 
+.advantages-item-image {
+  height: 100%;
+  object-fit: cover;
+}
+
 .advantages-item:nth-child(3n) {
   background-color: rgba(131, 179, 211, 0.2);
 }
@@ -614,22 +619,19 @@ body {
 }
 
 .hotel-card-item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px 1fr;
+
+  /* display: flex;
+  flex-direction: column; */
   border-radius: 4px;
-  gap: 16px;
+  gap: 16px 20px;
   padding: 20px;
   border: 1px solid #e6e6e6;
+  align-items: center;
+  width: 340px;
 }
-
-.hotel-description {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0;
-  /* margin-bottom: 16px; */
-}
-
-
 
 .advantages-container-wide {
   background: #82B3D3;
@@ -637,18 +639,6 @@ body {
   align-items: center;
   padding: 102px 85px;
 }
-
-/* .advantages-item-container {
-  width: 230px;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 90px 85px;
-  margin-top: auto;
-  margin-bottom: auto;
-} */
-  /*Title*/
 
 .advantages-title {
   color: #000000;
@@ -674,12 +664,9 @@ body {
   line-height: 21px;
 }
 
-
-
 .subscribe-description {
   margin-bottom: 54px;
 }
-
 
 .button-hotel-search, .subscribe-button {
   width: 376px;
@@ -694,11 +681,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   padding: 8px 50px;
-  /* margin-top: 54px; */
   text-decoration: none;
-  /* display: inline-flex;
-  justify-content: center; */
-  /* align-items: center; */
 }
 
 .subscribe-form {
@@ -713,7 +696,6 @@ body {
   align-items: center;
   border: none;
   border-radius: 0 4px 4px 0;
-  /* display: inline-block; */
 }
 
 .subscribe-index {
@@ -724,24 +706,9 @@ body {
   background-repeat: no-repeat;
 }
 
-
-
-
-
-
 .catalog-filter {
   display: flex;
 }
-
-
-
-
-
-
-
-
-
-
 
 .description {
   text-align: center;
@@ -756,8 +723,6 @@ body {
   margin-bottom: 54px;
 }
 
-
-
 .advantages-description {
   color: #ffffff;
   font-family: "PT Sans";
@@ -765,11 +730,8 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
+  margin: 0;
 }
-
-
-
-
 
 .navigation-link-current {
   border-bottom: 2px #746257 solid;
@@ -793,10 +755,7 @@ body {
 .navigation-item .favorites-add {
   position: relative;
   margin-right: 20px;
-  /* padding: 22px 12px; */
 }
-
-
 
 .gargeaus-sedona {
   display: block;
@@ -804,13 +763,10 @@ body {
   padding-top: 51px;
 }
 
-
-
 .hotel-search {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 96px 304px; */
 }
 
 /* footer */
@@ -822,7 +778,6 @@ body {
   margin: 40px 70px 30px;
 }
 
-
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
@@ -832,10 +787,6 @@ body {
   width: 200px;
   justify-content: flex-start;
   list-style-type: none;
-}
-
-.footer-social-item {
-
 }
 
 .field {
@@ -874,9 +825,6 @@ body {
   font-family: "PT Sans";
 }
 
-
-
-
 .inner-background {
   background-image: url("../images/inner-background.jpg");
   background-repeat: no-repeat;
@@ -897,10 +845,8 @@ body {
 }
 
 .hotel-card-title {
-  /* align-self: flex-start; */
   color:  #000000;
   margin: 0;
-  /* margin-bottom: 16px; */
   font-family: "PT Sans";
   font-size: 24px;
   font-style: normal;
@@ -910,16 +856,5 @@ body {
 
 .hotel-card-link {
   text-decoration: none;
-  display: block;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: #000000;
-  /* margin-bottom: 16px; */
-}
-
-
-
-.visually-hidden {
-  display: none;
+  grid-column: 1 / -1;
 }
