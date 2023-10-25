@@ -275,7 +275,7 @@ body {
   font-family: "PT Sans";
   color:#ffffff;
   font-weight: 700;
-  line-height: 36px; /* 180% */
+  line-height: 36px;
   text-transform: uppercase;
   text-align: center;
   width: 60px;
@@ -479,7 +479,9 @@ body {
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
-  max-width: 620px;
+  max-width: 175px;
+  margin: 0 auto;
+  margin-bottom: 60px;
 }
 
 .advantages-sedona-title,
@@ -530,6 +532,13 @@ body {
   flex-direction: column;
   text-align: center;
   align-items: center;
+}
+
+.hotel-search-container {
+  padding: 96px 304px;
+}
+
+.service-container {
   padding: 64px 0 64px 0;
 }
 
@@ -549,6 +558,7 @@ body {
   padding: 103px 85px;
   box-sizing: border-box;
   background:  rgba(131, 179, 211, 0.12);
+  text-align: center;
 }
 
 .advantages-item-image {
@@ -652,16 +662,6 @@ body {
   padding: 102px 85px;
 }
 
-.advantages-title {
-  color: #000000;
-  font-family: "PT Sans";
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .advantages-title-wide {
   color: #ffffff;
   margin-top: 0;
@@ -674,6 +674,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  margin: 0;
 }
 
 .subscribe-description {
@@ -709,7 +710,7 @@ body {
 
 .hotel-search-description {
   margin-bottom: 54px;
-  width: 592px;
+  max-width: 592px;
 }
 
 .advantages-description {
