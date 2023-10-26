@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction:column; /*Повернём ось, чтобы блоки располагались сверху вниз.*/
   min-height: 100%;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 21px;
   color: #333333;
@@ -45,10 +45,9 @@ body {
   text-transform: uppercase;
   border-radius: 4px;
   text-align: center;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  line-height: 36px;
   padding: 8px 50px;
   line-height: 36px;
   text-decoration: none;
@@ -132,13 +131,13 @@ body {
   color: #ffffff;
 }
 
-.filter-buttons {
+.catalog-filter-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   gap: 32px;
   width: 191px;
-  margin-left: auto;
+  margin-left: 70px;
 }
 
 .button-display {
@@ -225,6 +224,10 @@ body {
 .container {
   width: 1060px;
   margin: 0 auto;
+}
+
+.catalog-container {
+  padding: 50px 70px 60px;
 }
 
 .hotel-found {
@@ -339,10 +342,30 @@ body {
   margin-right: 20px;
 }
 
-.catalog-filter-group,
-.catalog-filter-housing,
+.catalog-filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .filter-price {
   border: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.catalog-filter .infrastructure {
+  width: 151px;
+  margin-right: 70px;
+}
+
+.catalog-filter .housing-type {
+  width: 151px;
+  margin-right: 140px;
 }
 
 .breadcrumbs {
@@ -364,6 +387,16 @@ body {
 .infrastructure {
   margin-right: 70px;
   width: 150px;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .catalog-filter-title,
@@ -448,7 +481,6 @@ body {
   font-size: 30px;
   font-family: "PT Sans";
   color:#000000;
-  /* margin: 0; */
 }
 
 .display-list {
@@ -619,13 +651,10 @@ body {
 }
 
 .service-item {
-  /* width: 400px;
-  /* padding: 80px 85px; */
   text-align: center;
   width: 400px;
   min-height: 385px;
   padding: 80px 85px;
-
 }
 
 .background-service {
@@ -781,7 +810,6 @@ body {
   padding: 12px 20px;
   background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
-  border-color: transparent ;
   border: none;
   cursor: pointer;
 }
@@ -822,6 +850,8 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 78px;
+  margin: 0;
+  margin-bottom: 8px;
 }
 
 .hotel-card-title {
