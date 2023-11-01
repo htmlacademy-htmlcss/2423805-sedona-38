@@ -54,10 +54,9 @@
               <header class="inner-header">
                 <h1 class="inner-header-title">Гостиницы Седоны</h1>
                 <ul class="breadcrumbs">
-                  <li class="breadcrumbs-item breadcrumbs-item-arrow">
+                  <li class="breadcrumbs-item">
                     <a class="breadcrumbs-link-home breadcrumbs-link" href="index.html">
                       <span class="visually-hidden">Главная</span>
-                      <!-- <img src="images/home.svg" width="13" height="15" alt="Go to home page"> -->
                     </a>
                   </li>
                   <li class="breadcrumbs-item">
@@ -72,16 +71,25 @@
                     <legend class="catalog-filter-title">Инфраструктура:</legend>
                     <ul class="catalog-filter-list">
                       <li class="catalog-filter-item">
-                        <input class="control-input" type="checkbox" name="Бассейн" id="pool" checked>
-                        <label for="pool">Бассейн</label>
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="checkbox" name="Бассейн" checked>
+                          <span class="control-mark"></span>
+                          <span class="control-label">Бассейн</span>
+                        </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <input class="control-input" type="checkbox" name="Парковка" id="parking" checked>
-                        <label for="parking">Парковка</label>
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="checkbox" name="Парковка" checked>
+                          <span class="control-mark"></span>
+                          <span class="control-label">Парковка</span>
+                        </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <input class="control-input" type="checkbox" name="Wi-Fi" id="wi-fi">
-                        <label for="wi-fi">Wi-Fi</label>
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Wi-Fi</span>
+                        </label>
                       </li>
                     </ul>
                   </fieldset>
@@ -89,18 +97,28 @@
                     <legend class="catalog-filter-title">Тип жилья:</legend>
                     <ul class="catalog-filter-list">
                       <li class="catalog-filter-item">
-                        <input class="control-input" type="radio" value="hotel" id="hotel" name="type-of-housing"
-                          checked>
-                        <label for="hotel">Гостиница</label>
+
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="hotel" checked>
+                          <span class="control-mark"></span>
+                          <span class="control-label">Гостиница</span>
+                        </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <input class="control-input" type="radio" value="motel" id="motel" name="type-of-housing">
-                        <label for="motel">Мотель</label>
+
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="motel">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Мотель</span>
+                        </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <input class="control-input" type="radio" value="apartments" id="apartments"
-                          name="type-of-housing">
-                        <label for="apartments">Апартаменты</label>
+
+                        <label class="control">
+                          <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="apartments">
+                          <span class="control-mark"></span>
+                          <span class="control-label">Апартаменты</span>
+                        </label>
                       </li>
                     </ul>
                   </fieldset>
@@ -115,7 +133,16 @@
                         <span>до</span>
                         <input type="number" value="9000">
                       </label>
-                      <!-- <button type=""></button> -->
+                    </div>
+                    <div class="range-scale">
+                      <div class="range-bar">
+                        <button type="button" class="range-toggle toggle-min">
+                          <span class="visually-hidden">Изменить минимальную цену</span>
+                        </button>
+                        <button type="button" class="range-toggle toggle-max">
+                          <span class="visually-hidden">Изменить максимальную цену</span>
+                        </button>
+                      </div>
                     </div>
                   </fieldset>
                   <div class="catalog-filter-buttons">
@@ -130,11 +157,14 @@
             <section class="hotel-found">
               <div class="sorting-container">
                 <h3 class="sorting-container-title">Найдено гостиниц: <span class="hotel-couting">38</span></h3>
-                <select class="sorting-select" aria-label="Сортировка">
-                  <option value="cheap">Сначала дешевые</option>
-                  <option value="expensive">Сначала дорогое</option>
-                  <option value="popular">Сначала популярное</option>
-                </select>
+                <div class="select sorting-type">
+                  <select class="sorting-select" aria-label="Сортировка">
+                    <option value="cheap">Сначала дешевые</option>
+                    <option value="expensive">Сначала дорогое</option>
+                    <option value="popular">Сначала популярное</option>
+                  </select>
+                </div>
+
                 <ul class="display-list">
                   <li class="display-item">
                     <a href="#" class="display-button button-table-view button-active">

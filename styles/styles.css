@@ -327,18 +327,29 @@ body {
   border: 2px solid #000000;
 }
 
+.select {
+  position: relative;
+  align-items: center;
+  width: 290px;
+
+ }
+
 .sorting-select {
   font-family: "PT Sans";
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  padding: 14px 20px;
+  padding: 12px 20px;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
   margin: 0 70px 0 auto;
   width: 292px;
   height: 49px;
   cursor: pointer;
+  background-image: url("../images/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  appearance: none;
 }
 
 .sorting-select:hover {
@@ -347,6 +358,11 @@ body {
 
 .sorting-select:focus {
   border: 2px solid #68a2ca;
+}
+
+.sorting-select:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.30);
+  color: rgba(0, 0, 0, 0.30);
 }
 
 .hotel-rating {
@@ -586,40 +602,58 @@ margin: 0;
   padding: 0;
   margin-bottom: 40px;
   list-style-type: none;
+  align-items: center;
 }
 
-.breadcrumbs-item-arrow {
+.breadcrumbs-item {
   position: relative;
   margin-right: 28px;
 }
 
-.breadcrumbs-item-arrow:after {
-  content: "";
+.breadcrumbs-item::after {
   position: absolute;
-  top: 1px;
-  right: -19px;
+  content: "";
+  top: 6px;
+  right: -18px;
   width: 7px;
-  height: 16px;
+  height: 10px;
   background-image: url("../images/arrow.svg");
+  background-position: center;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
 }
 
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   text-decoration: none;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.60);
+}
+
+.breadcrumbs-link:focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-link:active {
+  color:rgba(255, 255, 255, 0.30);
 }
 
 .breadcrumbs-link-home {
   background-image: url("../images/home.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 13px 15px;
+  background-size: 12px 12px;
   display: inline-block;
 
-  width: 13px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
 }
 
 .infrastructure {
@@ -652,10 +686,10 @@ margin: 0;
   list-style-type: none;
 }
 
-.catalog-filter-item input {
+/* .catalog-filter-item input {
   margin: 0;
   margin-right: 16px;
-}
+} */
 
 .catalog-filter-item label {
   color: #ffffff;
@@ -664,9 +698,65 @@ margin: 0;
   line-height: 23px;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  cursor: pointer;
+}
+
+.control-mark {
+  background-color: #ffffff;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 19px;
+  border-radius: 5px;
+}
+
+.control:hover .control-mark {
+  background-color: #ffffff;
+}
+
+.control:focus .control-mark {
+  background-color: #3f5e72;
+}
+
+.control:active .control-mark {
+  background-color: #ffffff;
+  border: 3px solid #83b3d3;
+}
+
+.control-input:disabled + .control-mark {
+  background-color: #3f5e72;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url("../images/selected-element.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+  content: "";
+}
+
 .price-container {
   display: grid;
   gap: 36px 2px;
+  margin-bottom: 36px;
   grid-template-columns: repeat(2, 143px);
 }
 
@@ -676,10 +766,7 @@ margin: 0;
 
 .price-container .cost-selection {
   display: flex;
-  /* font-family: "PT Sans";
-  font-size: 18px; */
   flex-direction: column;
-  /* line-height: 24px; */
   position: relative;
 }
 
@@ -710,6 +797,36 @@ margin: 0;
 
 .cost-selection:nth-child(2) input {
   border-radius: 0 4px 4px 0;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: #808080;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+  width: 226px;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.toggle-min {
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
 }
 
 .sorting-container {
@@ -902,8 +1019,10 @@ margin: 0;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-bottom: 40px;
   list-style-type: none;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .hotel-card-item {
@@ -1186,4 +1305,88 @@ margin: 0;
 .hotel-card-link {
   text-decoration: none;
   grid-column: 1 / -1;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.80);
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+
+}
+
+.modal-auth {
+  width: 717px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  background-image: url("../images/close.svg");
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  background-color: #e6e6e6;
+  outline: 1px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
+  background-color: #e6e6e6;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.auth-form-button {
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+
+  width: 577px;
+  padding: 18px 77px;
+  border-radius: 10px;
+  background-color: #83b3d3;
+  border: none;
 }
