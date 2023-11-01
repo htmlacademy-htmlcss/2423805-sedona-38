@@ -176,6 +176,55 @@
             </a>
         </div>
       </footer>
+
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-auth">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в седоне</h2>
+            <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="field-group arrival-form-date">
+                <label class="form-label" for="arrivel-date">
+                  Дата заезда:
+                  <button class="info">
+                    <span class="visually-hidden">Посмотреть дату заезда</span>
+                  </button>
+                </label>
+                <input type="text" id="arrival-date" name="arrival date" value="27 апреля 2020">
+                <span>Мы не можем отправить вас в прошлое.</span>
+              </p>
+              <p class="field-group departure-form-date">
+                 <label class="form-label" for="departure-date">
+                  Дата выезда:
+                  <button class="info">
+                    <span class="visually-hidden">Посмотреть дату выезда</span>
+                  </button>
+                </label>
+                <input type="text" id="departure-date" name="arrival date" value="1 сентября 2023">
+                <span>На эти даты есть свободные номера. Пока есть.</span>
+              </p>
+              <p class="field-group count-childe">
+
+                  <span>Взрослые:</span>
+                  <button>
+
+                  </button>
+                  <span>Дети:</span>
+                  <button>
+
+                  </button>
+
+              </p>
+              <button class="button auth-form-button" type="submit">Найти</button>
+
+            </form>
+          </section>
+        </div>
+      </div>
+
+
     </div>
   </body>
 </html>
