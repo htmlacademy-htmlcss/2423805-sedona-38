@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   </head>
 
   <body class="page">
@@ -13,29 +14,29 @@
       <header class="page-header">
         <div class="container">
           <nav class="navigation">
-            <a class="navigation-logo" href="index.html">
+            <a class="navigation-logo navigation-logo-index" href="index.html">
               <img class="page-header-logo" src="images/logo.svg" alt="Логотип г. Седона" width="138" height="70">
             </a>
             <ul class="navigation-list">
               <li class="navigation-item">
-                <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+                <a class="navigation-link main-link navigation-link-current" href="index.html">Главная</a>
               </li>
               <li class="navigation-item">
-                <a class="navigation-link" href="#">О Седоне</a>
+                <a class="navigation-link main-link" href="#">О Седоне</a>
               </li>
               <li class="navigation-item">
-                <a class="navigation-link" href="catalog.html">Гостиницы</a>
+                <a class="navigation-link main-link" href="catalog.html">Гостиницы</a>
               </li>
             </ul>
             <ul class="navigation-list navigation-user">
               <li class="navigation-item">
-                <a class="navigation-link" href="#">
+                <a class="navigation-link main-link" id="open-modal-window" href="#">
                   <span class="visually-hidden">Поиск</span>
                   <img src="images/search.svg" alt="search" width="20" height="20">
                 </a>
               </li>
               <li class="navigation-item">
-                <a class="navigation-link favorites-add" href="#">
+                <a class="navigation-link favorites-add main-link" href="#">
                   <span class="visually-hidden">Добавить в избранное</span>
                   <img src="images/heart.svg" alt="Избранные гостиницы" width="20" height="20">
                   <span class="favorites-count">12</span>
@@ -177,54 +178,94 @@
         </div>
       </footer>
 
-      <div class="modal-container modal-container-close">
+      <div class="modal-container modal-container-close" id="modal-window">
         <div class="modal modal-auth">
-          <button class="modal-close-button">
+          <button class="modal-close-button" id="modal-close-button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в седоне</h2>
             <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
-              <p class="field-group arrival-form-date">
-                <label class="form-label" for="arrivel-date">
-                  Дата заезда:
-                  <button class="info">
-                    <span class="visually-hidden">Посмотреть дату заезда</span>
-                  </button>
-                </label>
-                <input type="text" id="arrival-date" name="arrival date" value="27 апреля 2020">
-                <span>Мы не можем отправить вас в прошлое.</span>
-              </p>
-              <p class="field-group departure-form-date">
-                 <label class="form-label" for="departure-date">
-                  Дата выезда:
-                  <button class="info">
-                    <span class="visually-hidden">Посмотреть дату выезда</span>
-                  </button>
-                </label>
-                <input type="text" id="departure-date" name="arrival date" value="1 сентября 2023">
-                <span>На эти даты есть свободные номера. Пока есть.</span>
-              </p>
-              <p class="field-group count-childe">
+              <div class="field-group field-date">
+                <label class="form-label" for="arrivel-date">Дата заезда:</label>
+                <input class="field-group-date" type="text" id="arrival-date" name="arrival date" value="27 апреля 2020" placeholder="Укажите дату">
+                <p class="field-group-message date-error">Мы не можем отправить вас в прошлое.</p>
+              </div>
+              <div class="field-group field-date">
+                 <label class="form-label" for="departure-date">Дата выезда:</label>
+                <input class="field-group-date" type="text" id="departure-date" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату">
+                <p class="field-group-message">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
+              <section class="addition-form">
+                <div class="field-group">
+                  <label class="form-label" for="adults">Взрослые:</label>
+                  <div class="addition-button-wrapper">
+                    <button class="minus-button addition-form-button" type="button">
+                      <span class="visually-hidden">Уменьшить</span>
+                      <svg class="addition-button-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none">
+                        <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                      </svg>
+                    </button>
+                  </div>
 
-                  <span>Взрослые:</span>
-                  <button>
+                  <input class="addition-form-field" type="number" name="adults" id="adults" value="2" placeholder="0" max="99">
 
-                  </button>
-                  <span>Дети:</span>
-                  <button>
+                  <div class="addition-button-wrapper">
+                    <button class="plus-button addition-form-button" type="button">
+                      <span class="visually-hidden">Увеличить</span>
+                      <svg class="addition-button-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                      </svg>
+                    </button>
+                  </div>
 
-                  </button>
+                </div>
 
-              </p>
-              <button class="button auth-form-button" type="submit">Найти</button>
+                <div class="field-group">
+                  <span class="form-label-icon">
+                    <label class="form-label-kids" for="children">Дети:</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                        <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                          <circle cx="13" cy="13" r="13"/>
+                         <path fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd" fill="white"/>
+                        </svg>
+                      </button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
+                        Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                      </span>
+                    </span>
+                  </span>
+
+                  <div class="addition-button-wrapper">
+                    <button class="minus-button addition-form-button" type="button">
+                      <span class="visually-hidden">Уменьшить</span>
+                      <svg class="addition-button-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none">
+                        <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <input class="addition-form-field" type="number" name="children" id="children" value="2" placeholder="0" max="99">
+
+                  <div class="addition-button-wrapper">
+                    <button class="plus-button addition-form-button" type="button">
+                      <span class="visually-hidden">Увеличить</span>
+                      <svg class="addition-button-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+              </section>
+              <button class="auth-form-button" type="submit">Найти</button>
 
             </form>
           </section>
         </div>
       </div>
-
-
     </div>
+    <script src="js/index.js"></script>
   </body>
 </html>
