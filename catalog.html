@@ -12,7 +12,7 @@
   <body class="page">
     <div class="page-container">
       <header class="page-header">
-        <div class="container">
+        <div class="page-header-container">
           <nav class="navigation">
             <a class="navigation-logo" href="index.html">
               <img class="page-header-logo" src="images/logo.svg" alt="Логотип г. Седона" width="138" height="70">
@@ -28,7 +28,7 @@
                 <a class="navigation-link main-link navigation-link-current" href="catalog.html">Гостиницы</a>
               </li>
             </ul>
-            <ul class="navigation-list navigation-user">
+            <ul class="navigation-user">
               <li class="navigation-item">
                 <a class="navigation-link main-link" id="open-modal-window" href="#">
                   <span class="visually-hidden">Поиск</span>
@@ -39,13 +39,11 @@
                 <a class="navigation-link favorites-add main-link" href="#">
                   <span class="visually-hidden">Добавить в избранное</span>
                   <img src="images/heart.svg" alt="heart" width="20" height="20">
-                  <span class="favorites-count">12</span>
+                  <span class="navigation-basket">12<span>
                 </a>
               </li>
-              <li class="navigation-item">
-                <a class="navigation-button" id="open-model-window" href="catalog.html">Хочу сюда!</a>
-              </li>
             </ul>
+            <a class="navigation-button" href="catalog.html">Хочу сюда!</a>
           </nav>
         </div>
       </header>
@@ -53,7 +51,7 @@
           <div class="inner-background">
             <div class="container">
               <header class="inner-header">
-                <h1 class="inner-header-title">Гостиницы Седоны</h1>
+                <h1 class="inner-header-title">Гостиницы Седоны Гостиницы Седоны</h1>
                 <ul class="breadcrumbs">
                   <li class="breadcrumbs-item">
                     <a class="breadcrumbs-link-home breadcrumbs-link" href="index.html">
@@ -74,21 +72,21 @@
                       <li class="catalog-filter-item">
                         <label class="control">
                           <input class="visually-hidden control-input" type="checkbox" name="Бассейн" checked>
-                          <span class="control-mark"></span>
+                          <span class="control-mark" tabindex="0"></span>
                           <span class="control-label">Бассейн</span>
                         </label>
                       </li>
                       <li class="catalog-filter-item">
                         <label class="control">
                           <input class="visually-hidden control-input" type="checkbox" name="Парковка" checked>
-                          <span class="control-mark"></span>
+                          <span class="control-mark" tabindex="0"></span>
                           <span class="control-label">Парковка</span>
                         </label>
                       </li>
                       <li class="catalog-filter-item">
                         <label class="control">
                           <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi">
-                          <span class="control-mark"></span>
+                          <span class="control-mark" tabindex="0"></span>
                           <span class="control-label">Wi-Fi</span>
                         </label>
                       </li>
@@ -101,7 +99,7 @@
 
                         <label class="control">
                           <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="hotel" checked>
-                          <span class="control-mark"></span>
+                          <span class="control-mark" tabindex="0"></span>
                           <span class="control-label">Гостиница</span>
                         </label>
                       </li>
@@ -109,7 +107,7 @@
 
                         <label class="control">
                           <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="motel">
-                          <span class="control-mark"></span>
+                          <span class="control-mark" tabindex="0"></span>
                           <span class="control-label">Мотель</span>
                         </label>
                       </li>
@@ -117,7 +115,7 @@
 
                         <label class="control">
                           <input class="visually-hidden control-input" type="radio" name="type-of-housing" value="apartments">
-                          <span class="control-mark"></span>
+                          <span class="control-mark" tabindex="0"></span>
                           <span class="control-label">Апартаменты</span>
                         </label>
                       </li>
@@ -192,11 +190,11 @@
                     <img class="hotel-card-image" width="300" height="212" src="images/hotels/hotel-1.jpg" alt="Вид сквозь пещеру на звездное небо">
                   </a>
                   <a class="hotel-card-link" href="#">
-                    <h3 class="hotel-card-title">Amara Resort & Spa</h3>
+                    <h3 class="hotel-card-title">Amara Resort & Spa Amara Resort & Spa</h3>
                   </a>
                     <span class="card-type">Гостиница</span>
                     <span class="card-price">От 4000 ₽</span>
-                    <a class="hotel-button hotel-button-hover" href="#">Подробнее</a>
+                    <a class="hotel-button more-details-button" href="#">Подробнее</a>
                     <button class="hotel-button button-favorites" href="#">В избранное</button>
                     <div class="hotel-card-stars four-stars">
                       <span class="visually-hidden">Четырехзвездочная гостиница</span>
@@ -212,7 +210,7 @@
                   </a>
                     <span class="card-type">Гостиница</span>
                     <span class="card-price">От 5000 ₽</span>
-                    <a class="hotel-button hotel-button-hover" href="#">Подробнее</a>
+                    <a class="hotel-button more-details-button" href="#">Подробнее</a>
                     <button class="hotel-button button-in-favorites" href="#">В избранном</button>
                     <div class="hotel-card-stars four-stars">
                       <span class="visually-hidden">Четырехзвездочная гостиница</span>
@@ -224,11 +222,11 @@
                     <img class="hotel-card-image" width="300" height="212" src="images/hotels/hotel-3.jpg" alt="Горы на фоне голубого неба">
                   </a>
                   <a class="hotel-card-link" href="#">
-                    <h3 class="hotel-card-title">Desert Quail Inn</h3>
+                    <h3 class="hotel-card-title">Desert Quail Inn Desert Quail Inn</h3>
                   </a>
                     <span class="card-type">Гостиница</span>
                     <span class="card-price">От 2500 ₽</span>
-                    <a class="hotel-button hotel-button-hover" href="#">Подробнее</a>
+                    <a class="hotel-button more-details-button" href="#">Подробнее</a>
                     <button class="hotel-button button-favorites" href="#">В избранное</button>
                     <div class="hotel-card-stars three-stars">
                       <span class="visually-hidden">Трехзвездочная гостиница</span>
@@ -240,11 +238,11 @@
                     <img class="hotel-card-image" width="300" height="212" src="images/hotels/hotel-4.jpg" alt="Звездное небо перед рассветом в горах">
                   </a>
                   <a class="hotel-card-link" href="#">
-                    <h3 class="hotel-card-title">GreenTree Inn</h3>
+                    <h3 class="hotel-card-title">GreenTree Inn GreenTree Inn</h3>
                   </a>
                     <span class="card-type">Гостиница</span>
                     <span class="card-price">От 1500 ₽</span>
-                    <a class="hotel-button hotel-button-hover" href="#">Подробнее</a>
+                    <a class="hotel-button more-details-button" href="#">Подробнее</a>
                     <button class="hotel-button button-favorites" href="#">В избранное</button>
                     <div class="hotel-card-stars two-stars">
                       <span class="visually-hidden">Двухзвездочная гостиница</span>
@@ -318,7 +316,6 @@
           </a>
         </div>
       </footer>
-
       <div class="modal-container modal-container-close" id="modal-window">
         <div class="modal modal-auth">
           <button class="modal-close-button" id="modal-close-button">
@@ -338,8 +335,8 @@
                 <p class="field-group-message">На эти даты есть свободные номера. Пока есть.</p>
               </div>
               <section class="addition-form">
-                <div class="field-group">
-                  <label class="form-label" for="adults">Взрослые:</label>
+                <div class="field-group addition-form-group">
+                  <label class="field-group-label" for="adults">Взрослые:</label>
                   <div class="addition-button-wrapper">
                     <button class="minus-button addition-form-button" type="button">
                       <span class="visually-hidden">Уменьшить</span>
@@ -349,7 +346,7 @@
                     </button>
                   </div>
 
-                  <input class="addition-form-field" type="number" name="adults" id="adults" value="2" placeholder="0" max="99">
+                  <input class="addition-form-field" type="number" name="adults" id="adults" value="22" placeholder="0" max="99">
 
                   <div class="addition-button-wrapper">
                     <button class="plus-button addition-form-button" type="button">
@@ -363,7 +360,7 @@
                 </div>
 
                 <div class="field-group">
-                  <span class="form-label-icon">
+                  <span class="field-group-label form-label-icon">
                     <label class="form-label-kids" for="children">Дети:</label>
                     <span class="tooltip">
                       <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
@@ -401,7 +398,6 @@
                 </div>
               </section>
               <button class="auth-form-button" type="submit">Найти</button>
-
             </form>
           </section>
         </div>

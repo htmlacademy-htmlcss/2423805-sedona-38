@@ -12,7 +12,7 @@
   <body class="page">
     <div class="page-container">
       <header class="page-header">
-        <div class="container">
+        <div class="page-header-container">
           <nav class="navigation">
             <a class="navigation-logo navigation-logo-index" href="index.html">
               <img class="page-header-logo" src="images/logo.svg" alt="Логотип г. Седона" width="138" height="70">
@@ -28,24 +28,22 @@
                 <a class="navigation-link main-link" href="catalog.html">Гостиницы</a>
               </li>
             </ul>
-            <ul class="navigation-list navigation-user">
-              <li class="navigation-item">
+            <ul class="navigation-user">
+              <li class="navigation-item navigation-user-item">
                 <a class="navigation-link main-link" id="open-modal-window" href="#">
                   <span class="visually-hidden">Поиск</span>
                   <img src="images/search.svg" alt="search" width="20" height="20">
                 </a>
               </li>
-              <li class="navigation-item">
+              <li class="navigation-item navigation-user-item">
                 <a class="navigation-link favorites-add main-link" href="#">
                   <span class="visually-hidden">Добавить в избранное</span>
                   <img src="images/heart.svg" alt="Избранные гостиницы" width="20" height="20">
-                  <span class="favorites-count">12</span>
+                  <span class="navigation-basket">12</span>
                 </a>
               </li>
-              <li class="navigation-item">
-                <a class="navigation-button disabled" href="catalog.html">Хочу сюда!</a>
-              </li>
             </ul>
+              <a class="navigation-button" href="catalog.html">Хочу сюда!</a>
           </nav>
         </div>
 
@@ -197,8 +195,8 @@
                 <p class="field-group-message">На эти даты есть свободные номера. Пока есть.</p>
               </div>
               <section class="addition-form">
-                <div class="field-group">
-                  <label class="form-label" for="adults">Взрослые:</label>
+                <div class="field-group addition-form-group">
+                  <label class="field-group-label" for="adults">Взрослые:</label>
                   <div class="addition-button-wrapper">
                     <button class="minus-button addition-form-button" type="button">
                       <span class="visually-hidden">Уменьшить</span>
@@ -208,7 +206,7 @@
                     </button>
                   </div>
 
-                  <input class="addition-form-field" type="number" name="adults" id="adults" value="2" placeholder="0" max="99">
+                  <input class="addition-form-field" type="number" name="adults" id="adults" value="22" placeholder="0" max="99">
 
                   <div class="addition-button-wrapper">
                     <button class="plus-button addition-form-button" type="button">
@@ -222,7 +220,7 @@
                 </div>
 
                 <div class="field-group">
-                  <span class="form-label-icon">
+                  <span class="field-group-label form-label-icon">
                     <label class="form-label-kids" for="children">Дети:</label>
                     <span class="tooltip">
                       <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
@@ -260,7 +258,6 @@
                 </div>
               </section>
               <button class="auth-form-button" type="submit">Найти</button>
-
             </form>
           </section>
         </div>
