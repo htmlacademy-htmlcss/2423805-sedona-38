@@ -11,7 +11,7 @@
 
   <body class="page">
     <div class="page-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <div class="page-header-container">
           <nav class="navigation">
             <a class="navigation-logo" href="index.html">
@@ -30,7 +30,7 @@
             </ul>
             <ul class="navigation-user">
               <li class="navigation-item">
-                <a class="navigation-user-link main-link user-navigation-search" id="open-modal-window" href="#">
+                <a class="navigation-user-link main-link user-navigation-search" href="#">
                   <span class="visually-hidden">Поиск</span>
                 </a>
               </li>
@@ -41,11 +41,11 @@
                 </a>
               </li>
             </ul>
-            <a class="navigation-button" href="catalog.html">Хочу сюда!</a>
+            <a class="navigation-button" href="#" id="open-modal-window">Хочу сюда!</a>
           </nav>
         </div>
       </header>
-      <main class="main-inner main-container">
+      <main class="main-inner main-container" data-test="main">
           <div class="inner-background">
             <div class="container">
               <header class="inner-header">
@@ -61,7 +61,7 @@
                   </li>
                 </ul>
               </header>
-              <section class="filter">
+              <section class="filter" data-test="filter">
                 <h2 class="visually-hidden">Список отелей с фильтрами</h2>
                 <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
                   <fieldset class="catalog-filter-group infrastructure">
@@ -147,7 +147,7 @@
               </section>
             </div>
           </div>
-          <div class="catalog-container">
+          <div class="catalog-container" data-test="catalog">
             <section class="hotel-found">
               <div class="sorting-container">
                 <h3 class="sorting-container-title">Найдено гостиниц: <span class="hotel-couting">38</span></h3>
@@ -269,7 +269,7 @@
               </div>
             </section>
           </div>
-          <section class="subscribe">
+          <section class="subscribe" data-test="subscribe">
             <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
             <p class="description subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -280,7 +280,7 @@
             </form>
           </section>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <div class="page-footer-container">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
@@ -321,12 +321,12 @@
             <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
               <div class="field-group field-date">
                 <label class="form-label" for="arrivel-date">Дата заезда:</label>
-                <input class="field-group-date" type="text" id="arrival-date" name="arrival date" value="27 апреля 2020" placeholder="Укажите дату">
+                <input class="field-group-date modal-input" type="text" id="arrival-date" name="arrival date" value="27 апреля 2020" placeholder="Укажите дату">
                 <p class="field-group-message date-error">Мы не можем отправить вас в прошлое.</p>
               </div>
               <div class="field-group field-date">
-                 <label class="form-label" for="departure-date">Дата выезда:</label>
-                <input class="field-group-date" type="text" id="departure-date" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату">
+                <label class="form-label" for="departure-date">Дата выезда:</label>
+                <input class="field-group-date modal-input" type="text" id="departure-date" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату">
                 <p class="field-group-message">На эти даты есть свободные номера. Пока есть.</p>
               </div>
               <section class="addition-form">
@@ -341,7 +341,7 @@
                     </button>
                   </div>
 
-                  <input class="addition-form-field" type="number" name="adults" id="adults" value="2" placeholder="0" max="99">
+                  <input class="addition-form-field modal-input" type="number" name="adults" id="adults" value="2" placeholder="0" max="99">
 
                   <div class="addition-button-wrapper">
                     <button class="plus-button addition-form-button" type="button">
@@ -379,7 +379,7 @@
                     </button>
                   </div>
 
-                  <input class="addition-form-field" type="number" name="children" id="children" value="2" placeholder="0" max="99">
+                  <input class="addition-form-field modal-input" type="number" name="children" id="children" value="2" placeholder="0" max="99">
 
                   <div class="addition-button-wrapper">
                     <button class="plus-button addition-form-button" type="button">
