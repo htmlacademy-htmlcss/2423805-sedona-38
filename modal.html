@@ -11,7 +11,7 @@
 
   <body class="page">
     <div class="page-container">
-      <header class="page-header" data-test="header">
+      <header class="page-header">
         <div class="page-header-container">
           <nav class="navigation">
             <a class="navigation-logo navigation-logo-index" href="index.html">
@@ -30,7 +30,7 @@
             </ul>
             <ul class="navigation-user">
               <li class="navigation-item">
-                <a class="navigation-user-link main-link user-navigation-search" href="#">
+                <a class="navigation-user-link main-link user-navigation-search" id="open-modal-window" href="#">
                   <span class="visually-hidden">Поиск</span>
                 </a>
               </li>
@@ -41,17 +41,18 @@
                 </a>
               </li>
             </ul>
-              <a class="navigation-button" href="#" id="open-modal-window">Хочу сюда!</a>
+              <a class="navigation-button" href="catalog.html">Хочу сюда!</a>
           </nav>
         </div>
+
       </header>
-      <main class="main-container main-index" data-test="main">
-        <section class="hero" data-test="hero">
+      <main class="main-container main-index">
+        <section class="hero">
           <h1 class="visually-hidden">Городок Седона</h1>
           <img class="hero-logo" src="images/hero-logo.svg" width="458" height="352"
             alt="Welcom to the gargeaus Sedona. Becouse the Grand Canyon sucks!">
         </section>
-        <section class="advantages" data-test="advantages">
+        <section class="advantages">
           <div class="advantages-container">
             <h2 class="advantages-sedona-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p class="description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -92,7 +93,7 @@
             </li>
           </ul>
         </section>
-        <section class="hotel-service" data-test="service">
+        <section class="hotel-service">
           <div class="service-container">
             <h2 class="service-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
             <p class="description">Опытный персонал и качественное обслуживание!</p>
@@ -119,7 +120,7 @@
             </li>
           </ul>
         </section>
-        <section class="hotel-search" data-test="search">
+        <section class="hotel-search">
           <div class="hotel-search-container">
             <h2 class="hotel-search-title">Заинтересовались?</h2>
             <p class="description hotel-search-description">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения
@@ -127,7 +128,7 @@
             <a class="hotel-search-button" href="catalog.html">Поиск гостиницы в Седоне</a>
           </div>
         </section>
-        <section class="subscribe subscribe-index" data-test="subscribe">
+        <section class="subscribe subscribe-index">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="description subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -138,7 +139,7 @@
           </form>
         </section>
       </main>
-      <footer class="page-footer" data-test="footer">
+      <footer class="page-footer">
         <div class="page-footer-container">
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="footer-social-list">
@@ -169,10 +170,9 @@
             </a>
         </div>
       </footer>
-
-      <div class="modal-container modal-container-close" id="modal-window">
-        <div class="modal modal-auth">
-          <button class="modal-close-button" id="modal-close-button">
+      <div class="modal-wrapper">
+        <div class="modal-single modal-auth" data-test="modal">
+          <button class="modal-close-button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
@@ -257,6 +257,6 @@
         </div>
       </div>
     </div>
-    <script src="js/index.js"></script>
+ <!--    <script src="js/index.js"></script> -->
   </body>
 </html>
