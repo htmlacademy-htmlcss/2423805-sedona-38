@@ -969,7 +969,6 @@ margin: 0;
 }
 
 .service-description {
-  /*font-family: "PT Sans", sans-serif;*/
   font-size: 18px;
   text-align: center;
   line-height: 21px;
@@ -1071,10 +1070,8 @@ margin: 0;
 }
 
 .service-item {
-  /*text-align: center;*/
   position: relative;
   width: 400px;
-  /*min-height: 385px;*/
   padding: 184px 85px 80px;
 }
 
