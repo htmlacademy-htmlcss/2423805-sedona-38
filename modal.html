@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="favicon-32x32.ico">
   </head>
 
   <body class="page">
@@ -15,7 +15,7 @@
         <div class="page-header-container">
           <nav class="navigation">
             <a class="navigation-logo navigation-logo-index" href="index.html">
-              <img class="page-header-logo" src="images/logo.svg" alt="Логотип г. Седона" width="138" height="70">
+              <img class="page-header-logo" src="images/logo.svg" alt="Логотип г. Седона." width="138" height="70">
             </a>
             <ul class="navigation-list">
               <li class="navigation-item">
@@ -65,7 +65,7 @@
                 <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <img class="advantages-item-image" src="images/sedona-street.jpg" width="800" height="385"
-                alt="Домик в Седоне">
+                alt="Домик в Седоне.">
             </li>
             <li class="advantages-item">
               <div class="advantages-item-container">
@@ -91,7 +91,7 @@
                 <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <img class="advantages-item-image" src="images/bridge-devil.jpg" width="800" height="385"
-                alt="Мост дьявола в Седоне">
+                alt="Каменный мост.">
             </li>
           </ul>
         </section>
@@ -192,7 +192,7 @@
       </footer>
       <div class="modal-wrapper">
         <div class="modal-single modal-auth" data-test="modal">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button" tabindex="0">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
@@ -201,13 +201,13 @@
               <div class="field-group field-date">
                 <label class="form-label" for="arrival-date">Дата заезда:</label>
                 <input class="field-group-date modal-input" type="text" id="arrival-date" name="arrival date"
-                  value="27 апреля 2020" placeholder="Укажите дату">
+                  value="27 апреля 2020" placeholder="Укажите дату" required>
                 <p class="field-group-message date-error">Мы не можем отправить вас в прошлое.</p>
               </div>
               <div class="field-group field-date">
                 <label class="form-label" for="departure-date">Дата выезда:</label>
                 <input class="field-group-date modal-input" type="text" id="departure-date" name="departure-date"
-                  value="1 сентября 2023" placeholder="Укажите дату">
+                  value="1 сентября 2023" placeholder="Укажите дату" required>
                 <p class="field-group-message">На эти даты есть свободные номера. Пока есть.</p>
               </div>
               <div class="addition-form">

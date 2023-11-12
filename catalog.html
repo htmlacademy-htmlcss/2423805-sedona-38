@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sedona catalog</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="favicon-32x32.ico">
   </head>
 
   <body class="page">
@@ -123,11 +123,11 @@
                   <div class="price-container">
                     <label class="cost-selection">
                       <span>от</span>
-                      <input type="number" value="0">
+                      <input class="cost-selection-input" type="number" value="0" name="min-price" aria-label="Минимальная цена">
                     </label>
                     <label class="cost-selection">
                       <span>до</span>
-                      <input type="number" value="9000">
+                      <input class="cost-selection-input" type="number" value="9000" name="max-price" aria-label="Максимальная цена">
                     </label>
                   </div>
                   <div class="range-scale">
@@ -143,7 +143,7 @@
                 </fieldset>
                 <div class="catalog-filter-buttons">
                   <button class="button-apply" type="submit">Применить</button>
-                  <button class="button-reset" type="submit">Сбросить</button>
+                  <button class="button-reset" type="reset">Сбросить</button>
                 </div>
               </form>
             </section>
@@ -185,7 +185,7 @@
               <li class="hotel-card-item">
                 <a class="hotel-card-link" href="#">
                   <img class="hotel-card-image" width="300" height="212" src="images/hotels/hotel-1.jpg"
-                    alt="Вид сквозь пещеру на звездное небо">
+                    alt="Вид сквозь пещеру на звездное небо.">
                 </a>
                 <a class="hotel-card-link" href="#">
                   <h3 class="hotel-card-title">Amara Resort & Spa</h3>
@@ -202,7 +202,7 @@
               <li class="hotel-card-item">
                 <a class="hotel-card-link" href="hotel.html">
                   <img class="hotel-card-image" width="300" height="212" src="images/hotels/hotel-2.jpg"
-                    alt="Радуга над горами">
+                    alt="Радуга над горами.">
                 </a>
                 <a class="hotel-card-link" href="#">
                   <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
@@ -219,7 +219,7 @@
               <li class="hotel-card-item">
                 <a class="hotel-card-link" href="hotel.html">
                   <img class="hotel-card-image" width="300" height="212" src="images/hotels/hotel-3.jpg"
-                    alt="Горы на фоне голубого неба">
+                    alt="Горы на фоне голубого неба.">
                 </a>
                 <a class="hotel-card-link" href="#">
                   <h3 class="hotel-card-title">Desert Quail Inn</h3>
@@ -236,7 +236,7 @@
               <li class="hotel-card-item">
                 <a class="hotel-card-link" href="hotel.html">
                   <img class="hotel-card-image" width="300" height="212" src="images/hotels/hotel-4.jpg"
-                    alt="Звездное небо перед рассветом в горах">
+                    alt="Звездное небо перед рассветом в горах.">
                 </a>
                 <a class="hotel-card-link" href="#">
                   <h3 class="hotel-card-title">GreenTree Inn</h3>
@@ -336,7 +336,7 @@
       </footer>
       <div class="modal-container modal-container-close" id="modal-window">
         <div class="modal modal-auth">
-          <button class="modal-close-button" id="modal-close-button">
+          <button class="modal-close-button" id="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
@@ -345,13 +345,13 @@
               <div class="field-group field-date">
                 <label class="form-label" for="arrival-date">Дата заезда:</label>
                 <input class="field-group-date modal-input" type="text" id="arrival-date" name="arrival date"
-                  value="27 апреля 2020" placeholder="Укажите дату">
+                  value="27 апреля 2020" placeholder="Укажите дату" required>
                 <p class="field-group-message date-error">Мы не можем отправить вас в прошлое.</p>
               </div>
               <div class="field-group field-date">
                 <label class="form-label" for="departure-date">Дата выезда:</label>
                 <input class="field-group-date modal-input" type="text" id="departure-date" name="departure-date"
-                  value="1 сентября 2023" placeholder="Укажите дату">
+                  value="1 сентября 2023" placeholder="Укажите дату" required>
                 <p class="field-group-message">На эти даты есть свободные номера. Пока есть.</p>
               </div>
               <div class="addition-form">
