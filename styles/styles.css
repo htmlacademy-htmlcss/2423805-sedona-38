@@ -58,6 +58,7 @@ body {
   padding: 8px 50px;
   line-height: 36px;
   text-decoration: none;
+  outline: none;
 }
 
 .subscribe-button {
@@ -107,9 +108,10 @@ body {
 
 .card-price,
 .card-type {
-  color: #000000;
+  color: #333333;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
+  line-height: 21px;
 }
 
 .card-price {
@@ -124,9 +126,40 @@ body {
   cursor: pointer;
 }
 
+.hotel-button.disabled,
+.hotel-button:disabled {
+  color: #ffffff;
+
+  background-color: #e5e5e5;
+  cursor: default;
+
+  pointer-events: none;
+}
+
+.hotel-button.disabled:hover,
+.hotel-button.disabled:focus,
+.hotel-button.disabled:active {
+  background-color: #e5e5e5;
+}
+
+.button-reset.disabled,
+.button-reset:disabled {
+  opacity: 0.1;
+  cursor: default;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.button-reset.disabled:hover,
+.button-reset.disabled:focus,
+.button-reset.disabled:active {
+  background-color: transparent;
+}
+
 .hotel-rating {
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
+  color: #333333;
   line-height: 20px;
   text-transform: uppercase;
   border-radius: 4px;
@@ -150,6 +183,7 @@ body {
   border-radius: 4px;
   background-color: #756157;
   color: #ffffff;
+  outline: none;
 }
 
 .navigation-button {
@@ -202,6 +236,7 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
 }
 
 .button-apply {
@@ -227,6 +262,19 @@ body {
   background:transparent;
 }
 
+.button-reset:hover {
+  opacity: 0.6;
+}
+
+.button-reset:focus {
+  border: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.button-reset:active {
+  opacity: 0.3;
+}
+
 .button-favorites {
   background: #82b3d3;
 }
@@ -244,14 +292,6 @@ body {
 .button-favorites:active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.30);
-}
-
-.button-reset:hover {
-  opacity: 0.6;
-}
-
-.button-reset:active {
-  opacity: 0.3;
 }
 
 .button-in-favorites {
@@ -291,6 +331,7 @@ body {
   border-radius: 4px;
   background-color: #ffffff;
   padding: 14px 12px;
+  outline: none;
 }
 
 .display-button:hover {
@@ -306,15 +347,15 @@ body {
 }
 
 .button-table-view {
-  background-image: url("../images/view/View-icon-1.svg");
+  background-image: url("../images/view/view-icon-1.svg");
 }
 
 .button-single-view {
-  background-image: url("../images/view/View-icon-2.svg");
+  background-image: url("../images/view/view-icon-2.svg");
 }
 
 .button-list-view {
-  background-image: url("../images/view/View-icon-3.svg");
+  background-image: url("../images/view/view-icon-3.svg");
 }
 
 .button-active {
@@ -343,9 +384,11 @@ body {
   background-image: url("../images/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
+  background-color: #ffffff;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: none;
 }
 
 .sorting-select:hover {
@@ -469,7 +512,7 @@ body {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  padding: 11px 0 13px 0;
+  padding: 11px 11px 13px 11px;
   align-items: center;
   border-radius: 4px;
   background-color: #82b3d3;
@@ -481,8 +524,9 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
+  outline: none;
 }
 
 .pagination-link-hover {
@@ -503,9 +547,13 @@ body {
   color: rgba(255, 255, 255, 0.30);
 }
 
-.pagination-link-current,
-.pagination-link-ellipsis {
+.pagination-link-current {
   background: #f2f2f2;
+  color: #000000;
+}
+
+.pagination-link-ellipsis {
+  background: #ffffff;
   color: #000000;
 }
 
@@ -610,8 +658,8 @@ body {
   width: 288px;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+.cost-selection-input::-webkit-outer-spin-button,
+.cost-selection-input::-webkit-inner-spin-button {
 -webkit-appearance: none;
 margin: 0;
 }
@@ -673,6 +721,7 @@ margin: 0;
   line-height: 21px;
   color: #ffffff;
   text-decoration: none;
+  outline: none;
 }
 
 .breadcrumbs-link:hover {
@@ -738,6 +787,7 @@ margin: 0;
   width: 20px;
   height: 20px;
   border-radius: 5px;
+  outline: none;
 }
 
 .control-input:hover + .control-mark {
@@ -948,7 +998,10 @@ margin: 0;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 25px;
-  max-width: 620px;
+}
+
+.advantages-sedona-title {
+  max-width: 650px;
 }
 
 .hotel-search-title {
@@ -1260,6 +1313,7 @@ margin: 0;
   height: 26px;
   cursor: pointer;
   display: block;
+  outline: none;
 }
 
 .tooltip-icon {
@@ -1383,6 +1437,10 @@ margin: 0;
   align-items: center;
 }
 
+.footer-social-link {
+  outline: none;
+}
+
 .social-icon {
   fill:#83b3d3;
 }
@@ -1436,6 +1494,7 @@ margin: 0;
   text-transform: uppercase;
   text-decoration: none;
   width: 720px;
+  outline: none;
 }
 
 .contact-phone-number:hover,
@@ -1451,6 +1510,7 @@ margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
 }
 
 .htmlacademy-logo {
@@ -1617,6 +1677,7 @@ margin: 0;
   border-radius: 10px;
   background-color: #83b3d3;
   border: none;
+  outline: none;
 }
 
 .auth-form-button:hover {
@@ -1727,6 +1788,7 @@ margin: 0;
 }
 
 .addition-form-button {
+  background-color: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;

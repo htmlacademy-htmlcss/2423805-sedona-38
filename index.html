@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="favicon-32x32.ico">
   </head>
 
   <body class="page">
@@ -191,7 +191,7 @@
       </footer>
       <div class="modal-container modal-container-close" id="modal-window">
         <div class="modal modal-auth">
-          <button class="modal-close-button" id="modal-close-button">
+          <button class="modal-close-button" id="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
@@ -200,13 +200,13 @@
               <div class="field-group field-date">
                 <label class="form-label" for="arrival-date">Дата заезда:</label>
                 <input class="field-group-date modal-input" type="text" id="arrival-date" name="arrival date"
-                  value="27 апреля 2020" placeholder="Укажите дату">
+                  value="27 апреля 2020" placeholder="Укажите дату" required>
                 <p class="field-group-message date-error">Мы не можем отправить вас в прошлое.</p>
               </div>
               <div class="field-group field-date">
                 <label class="form-label" for="departure-date">Дата выезда:</label>
                 <input class="field-group-date modal-input" type="text" id="departure-date" name="departure-date"
-                  value="1 сентября 2023" placeholder="Укажите дату">
+                  value="1 сентября 2023" placeholder="Укажите дату" required>
                 <p class="field-group-message">На эти даты есть свободные номера. Пока есть.</p>
               </div>
               <div class="addition-form">
