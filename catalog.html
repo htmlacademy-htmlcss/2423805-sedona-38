@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sedona catalog</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon-32x32.ico">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
 
   <body class="page">
@@ -336,9 +337,6 @@
       </footer>
       <div class="modal-container modal-container-close" id="modal-window">
         <div class="modal modal-auth">
-          <button class="modal-close-button" id="modal-close-button" type="button">
-            <span class="visually-hidden">Закрыть</span>
-          </button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в седоне</h2>
             <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -368,7 +366,7 @@
                   </div>
 
                   <input class="addition-form-field" type="number" name="adults" id="adults" value="2" placeholder="0"
-                    max="99">
+                    max="99" required>
 
                   <div class="addition-button-wrapper">
                     <button class="plus-button addition-form-button" type="button">
@@ -379,9 +377,7 @@
                       </svg>
                     </button>
                   </div>
-
                 </div>
-
                 <div class="field-group">
                   <span class="field-group-label form-label-icon">
                     <label class="form-label-kids" for="children">Дети:</label>
@@ -412,7 +408,7 @@
                   </div>
 
                   <input class="addition-form-field" type="number" name="children" id="children" value="2"
-                    placeholder="0" max="99">
+                    placeholder="0" max="99" required>
 
                   <div class="addition-button-wrapper">
                     <button class="plus-button addition-form-button" type="button">
@@ -429,6 +425,9 @@
               <button class="auth-form-button" type="submit">Найти</button>
             </form>
           </section>
+          <button class="modal-close-button" id="modal-close-button" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
         </div>
       </div>
     </div>
